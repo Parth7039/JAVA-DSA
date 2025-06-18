@@ -45,7 +45,8 @@ public class Sorting {
     }
 
     public static void insertionSort(){
-//Divided into two parts
+//Divided into two parts then elements from unsorted zone are put to sorted zone
+
     }
 
     public static void main(String[] args) {
