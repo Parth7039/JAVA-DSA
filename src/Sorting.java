@@ -45,8 +45,23 @@ public class Sorting {
     }
 
     public static void insertionSort(){
-//Divided into two parts then elements from unsorted zone are put to sorted zone
+        //Divided into two parts then elements from unsorted zone are put to sorted zone
+        int[] arr = {7,8,3,1,2};
+        System.out.println(Arrays.toString(arr));
 
+        for (int i = 1; i < arr.length; i++) {
+            int current = arr[i];
+            int j = i-1;
+            while (j >= 0 && current < arr[j]) { // j>=0 can be removed
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = current;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
