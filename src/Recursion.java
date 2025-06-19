@@ -30,7 +30,30 @@ public class Recursion {
 
     }
 
+    //fibonacci
+    public static void printfibo(int a, int b, int n) {
+        if (n==0) {
+            return;
+        }
+        int c = a+b;
+        System.out.println(c);
+        printfibo(b, c, n-1);
+    }
+
+    //calculate x^n
+    public static int calcPower(int x, int n) {
+        if (n==0){
+            return 1;
+        }
+        if (x == 0){
+            return 0;
+        }
+        int powernm1 = calcPower(x,n-1);
+        int power = x * powernm1;
+        return power;
+    }
+
     public static void main(String[] args) {
-        System.out.println(printfact(5));
+        System.out.println(calcPower(3,3));
     }
 }
